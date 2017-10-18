@@ -1,5 +1,5 @@
 # blocktastic
-blocktastic is a reference blockchain implementation with no exotic features. It serves as a basic starting point for any blockchain application.
+blocktastic is a reference blockchain implementation with no exotic features. It serves as a generic starting point for blockchain applications.
 
 ## Usage
 One can create a blockchain
