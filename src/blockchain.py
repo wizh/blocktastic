@@ -1,15 +1,22 @@
 class Blockchain():
     def __init__(self):
-        pass
+        self.blocks = []
 
     def add_block(self, block):
-        pass
+        self.blocks.append(block)
 
     def get_latest_block(self):
-        pass
+        return self.blocks[-1]
 
     def get_block(self, index):
-        pass
+        if index < 0 or index >= len(self.blocks):
+            raise ValueError("Block with index does not exist")
+
+        return self.blocks[index]
 
     def create_genesis_block(self):
-        pass
+        if len(self.blocks) != 0:
+            raise ValueError("Blockchain is not empty")
+
+        genesis_block = Block(0, [], "", "I AM GOD")
+        self.add_block(genesis_block)
