@@ -1,3 +1,6 @@
+from constants import GENESIS_INDEX, GENESIS_MESSAGE
+import block
+
 class Blockchain():
     def __init__(self):
         self.blocks = []
@@ -18,5 +21,5 @@ class Blockchain():
         if len(self.blocks) != 0:
             raise ValueError("Blockchain is not empty")
 
-        genesis_block = Block(0, [], "", "I AM GOD")
+        genesis_block = block.Block(GENESIS_INDEX, [], "", GENESIS_MESSAGE)
         self.add_block(genesis_block)
