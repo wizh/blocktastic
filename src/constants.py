@@ -1,0 +1,5 @@
+GENESIS_INDEX = 0
+GENESIS_MESSAGE = "And blocktastic was created..."
+
+MINING_HARDNESS = 4
+MINING_CHARACTER = '1'
