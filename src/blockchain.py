@@ -9,6 +9,9 @@ class Blockchain():
         self.blocks.append(block)
 
     def get_latest_block(self):
+        if len(self.blocks) == 0:
+            raise ValueError("No genesis block")
+
         return self.blocks[-1]
 
     def get_block(self, index):
