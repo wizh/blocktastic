@@ -1,8 +1,7 @@
 from datetime import datetime
 from random import randint
 from sys import maxint
-from constants import *
-
+from constants import MINING_HARDNESS, MINING_CHARACTER
 
 class Block():
     def __init__(self, index, transactions, prev_hash, message):
