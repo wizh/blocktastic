@@ -6,6 +6,11 @@ class Blockchain():
         self.blocks = []
 
     def add_block(self, block):
+        if len(self.blocks) == 0:
+            raise ValueError("No genesis block")
+        if block.index != self.blocks[-1].index + 1:
+            raise ValueError("Block index invalid")
+
         self.blocks.append(block)
 
     def get_latest_block(self):
@@ -25,4 +30,4 @@ class Blockchain():
             raise ValueError("Blockchain is not empty")
 
         genesis_block = block.Block(GENESIS_INDEX, [], "", GENESIS_MESSAGE)
-        self.add_block(genesis_block)
+        self.blocks = [genesis_block]
